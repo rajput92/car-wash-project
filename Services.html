@@ -1,25 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="CarsWash_home_CSS.css"/>
+<style>
+.dropdown {
+    float: center;
+    overflow: hidden;
+}
+
+.dropbtn {
+    font-size: 16px;    
+    outline: 1px double blue;
+    color: black;
+    padding: 14px 16px;
+    background-color: yellow;
+	text-align:center;
+	position: relative;
+	margin-left:20%;
+	margin-top:5%;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	text-align: center;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.show {display:block;}
+ 
+</style>
 </head>
 <body>
 
 <img src="Carinwater1.jpg" style="z-index:-1; position: absolute; max-width:100%; opacity:0.2; ">
-<div style="width:28%; margin: auto; border: 3px solid #73AD21; float:left;">
-<h1>Combo Express Detailing Service</h1>
-</div>
+
+
+<div style="width:28%; height:100%; margin: auto; border: 3px solid #73AD21; float:left; position:relative; ">
+	<h1 style="text-align:center; ">Combo Express Detailing Service</h1>
+	<p style="text-align:centre; ">Our Combo detailing services brings both the interior and exterior of your vehicle back to life!</p>
+	<img src="image_4.jpg" style="position: relative; width:90%; margin-left:5%;">
+	<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">View Work Performed</button>
+		<div id="myDropdown" class="dropdown-content">
+			<p >The closest to a comprehensive detail that you can get at our car washes. We blow underneath and between seat cracks with compressed air, shampoo four floor mats, clean and condition the leather seats and dashboard, wipe four door panels, for a Super Clean Interior! We also apply a coat of Simoniz Clear Coat Protectant to your vehicles finish with a safe orbital buffer. The wax is gently	removed with a microfiber towel leaving the paint shiny and protected for up to 3 months.
+               The combination of the Super Clean Interior Package and Pro Wax Package makes for an impressive cleanup for most vehicles.</p>
+		</div>
+	</div>
+	</div>
 
 <div style="width:28%; margin: auto; border: 3px solid #73AD21; float:left;">
 <h1>Super Interior Clean Detailing Service</h1>
+<p>Our express interior detailing services will give the interior of your vehicle that new fresh feeling!</p>
+<img src="image_5.jpg" style="position: relative; width:90%;">
 </div>
 
 <div style="width:28%; margin: auto; border: 3px solid #73AD21; float:left;">
 <h1>Pro-Wax Express Detailing Service</h1>
+<p>Our Pro-Wax detailing will bring the shine back to your car's finish at a great price!</p>
+<img src="image_6.jpg" style="position: relative; width:90%;">
 </div>
 
 
 
-<script src="CarsWash_JS.js"></script>
+<script >function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script>
 </body>
 </html>
