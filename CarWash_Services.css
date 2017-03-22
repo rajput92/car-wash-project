@@ -1,0 +1,31 @@
+.dropdown {
+    float: center;
+    overflow: hidden;
+}
+.dropbtn {
+    font-size: 16px;    
+    outline: 1px double blue;
+    color: black;
+    padding: 14px 16px;
+    background-color: yellow;
+	text-align:center;
+	position: relative;
+	margin-left:20%;
+	margin-top:5%;
+	margin-bottom:5%;
+}
+.dropdown-content {
+    display: none;
+    position: relative;
+    min-width: 160px;
+    
+    z-index: 1;
+	text-align: left;
+	margin-left:5%;
+	margin-right:5%;
+}
+.dropbtn:hover, .dropbtn:focus {
+    
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.show {display:block;}
