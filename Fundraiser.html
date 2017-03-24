@@ -13,8 +13,8 @@ input[type=text], select {
 }
 
 input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
+    width: 50%;
+    background-color: #c0cce0;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -24,61 +24,95 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #2458ad;
 }
 
 div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    
 }
 </style>
 </head>
 
 <body>
+<div style="width:100%;height:100%;">
+	<img src="download.jpg" style="opacity : 0.4;z-index:-1;min-height: 100%;min-width: 1024px;width: 100%;height: auto;position: fixed;top: 0;left: 0; ">
+
  <div>
  <h2>Charity Information</h2>
  <hr>
 
 
-  <form action="/action_page.php">
-    <label for="fname">Name of Organization or Charity</label>
-    <input type="text" id="fname" name="firstname" placeholder="enter name of organization or charity">
+  <form action="/action_page.php" >
+<div style="display:block; position:relative; max-width:100%;">
+	<div style="width:30%;   float:left; position:relative;">
+    <label for="fname">Name of Organization or Charity</label><br>
+    <input type="text" id="Oname" name="organizationName" placeholder="enter name of organization or charity">
+	</div>
 
-    <label for="lname">Organization or event web site (if any)</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter organization or event web site (if any)">
+	<div style="width:30%;  float:left; position:relative;margin-left:10%; margin-right:30%;">
+    <label for="lname">Organization or event web site (if any)</label><br>
+    <input type="text" id="owebsite" name="organizationWebsite" placeholder="enter organization or event web site (if any)">
 	
+	</div>
+</div>
+	
+<div style="display:block; position:relative; max-width:100%;">
+	
+	<div style="width:30%;   float:left; position:relative;">
 	<label for="lname">Name of Charity Event</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter name of charity event">
+    <input type="text" id="cname" name="charityName" placeholder="enter name of charity event">
+	</div>
 	
+	<div style="width:30%;  float:left; position:relative;margin-left:10%; margin-right:30%;">
 	<label for="lname">Date Of Charity Event</label>
-    <input type="text" id="lname" name="lastname" placeholder="dd/mm/yy">
+    <input type="text" id="date" name="date" placeholder="dd/mm/yy">
+	</div>
+</div>
 	
+<div style="width:30%;  float:left; position:relative;">
 	<label for="lname">Number of Expected Guest</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter number of expected guest">
+    <input type="text" id="egnumber" name="expectedGuestnumber" placeholder="enter number of expected guest">
+</div>
 	
-	<h2>Contact Information</h2>
-	<label for="fname">Full Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="enter name of organization or charity">
+<div style="width:100%;  float:left; position:relative;">
 
-    <label for="lname">Email Address</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter organization or event web site (if any)">
-	
-	<label for="lname">Contact Phone Number
-</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter name of charity event">
-	
-	<label for="lname">Address Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="dd/mm/yy">
-	
-	<label for="lname">City</label>
-    <input type="text" id="lname" name="lastname" placeholder="enter number of expected guest">
- <hr>
-
-  
-    <input type="submit" value="Submit">
-  </form>
+	<h2>Contact Information</h2> <hr>
 </div>
 
+<div style="display:block; position:relative; max-width:100%;">
+	<div style="width:30%;   float:left; position:relative;">
+	<label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fullname" placeholder="Full Name">
+	</div>
+	
+	<div style="width:30%;  float:left; position:relative;margin-left:10%; margin-right:30%;">
+    <label for="lname">Email Address</label>
+    <input type="text" id="email" name="email" placeholder="Email Address">
+	</div>
+</div>
+
+<div style="display:block; position:relative; max-width:100%;">	
+	<div style="width:30%;   float:left; position:relative;">
+	<label for="lname">Contact Phone Number</label>
+    <input type="text" id="phnumber" name="phnumber" placeholder="Contact Phone Number">
+	</div>
+	<div style="width:30%;  float:left; position:relative;margin-left:10%; margin-right:30%;">
+	<label for="lname">Address Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Address">
+	</div>
+</div>
+
+<div style="width:30%;  float:left; position:relative;">
+	<label for="lname">City</label>
+    <input type="text" id="lname" name="lastname" placeholder="name of city">
+ <hr>
+ </div>
+
+  <div style="width:100%;  float:left; position:relative;margin-left:20%; margin-right:10%;">
+    <input type="submit" value="Submit">
+	</div>
+  </form>
+</div>
+</div>
 </body>
 </html>
