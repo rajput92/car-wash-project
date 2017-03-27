@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 50%;
-    background-color: #c0cce0;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #2458ad;
-}
-
-div {
-    
-}
-</style>
+<link rel="stylesheet" type="text/css" href="Fundraiser.css"/>
 </head>
 
 <body>
+
+
 <div style="width:100%;height:100%;">
-	<img src="download.jpg" style="opacity : 0.4;z-index:-1;min-height: 100%;min-width: 1024px;width: 100%;height: auto;position: fixed;top: 0;left: 0; ">
+<img src="image_15.jpg" style="z-index:-1;min-height: 100%;min-width: 1024px;width: 100%;height: auto;position: fixed;top: 0;left: 0; opacity:0.3; ">
+</div>
+<!--- navigation bar-->
+<nav class="container">
+<div class="center">
+  <a href="CarsWash_home.html"><b>Home</b></a>
+  <a href="Fundraiser.html"><b>Gift Card</b></a>
+  
+  <div class="dropdown">
+    <button class="dropbtn"><b>Auto Services</b></button>
+    <div class="dropdown-content">
+      <a href="Services.html"><b>Basic Plan</b></a>
+	  <a href="Services.html"><b>Premium Plan</b></a>
+      <a href="Services.html"><b>Shine and Protect</b></a>
+    </div>
+  </div> 
+  <img src="image_11.jpg" style="width:20%; float:left;">
+  <a href="Fundraiser.html"><b>Fundraiser</b></a>
+  <a href="CarsWash_AboutUS.html"><b>About Us</b></a>
+  <a href="#news"><b>Contacts</b></a>
+ </div>
+</nav>
 
  <div>
  <h2>Charity Information</h2>
  <hr>
+</div>
 
-
-  <form action="/action_page.php" >
+  <form action="thevarunfreelance@gmail.com" method="post" enctype="text/plain" >
 <div style="display:block; position:relative; max-width:100%;">
 	<div style="width:30%;   float:left; position:relative;">
     <label for="fname">Name of Organization or Charity</label><br>
@@ -103,7 +97,7 @@ div {
 </div>
 
 <div style="width:30%;  float:left; position:relative;">
-	<label for="lname">City</label>
+	<label for="lname" style="width:30%;">City</label>
     <input type="text" id="lname" name="lastname" placeholder="name of city">
  <hr>
  </div>
@@ -114,5 +108,8 @@ div {
   </form>
 </div>
 </div>
+<nav class="container"style="margin-top:2%;">
+<h4 style="color:orange; text-align:center;color:#483d8b;">© All right reserves by hrs car wash and area-51 Productions llc</h4>
+</nav>
 </body>
 </html>
