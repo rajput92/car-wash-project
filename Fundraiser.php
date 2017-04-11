@@ -1,7 +1,20 @@
 <?php
-	date_default_timezone_set('PST8PDT');
+
+	if(isset($_SESSION['id'])){
+		session_start();
+		date_default_timezone_set('PST8PDT');
 	include 'dbConfig.php';
 	include 'comments.php';
+			
+	}
+	else{
+		
+		session_destroy();
+		echo "Please login/signup to access this page";
+		
+	
+	
+	}
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +25,7 @@
 
 <body style="max-width:100%; max-height:100%;">
 <img src="image_1.jpg" style="z-index:-1;min-height: 100%;min-width: 1024px;width: 100%;height: auto;position: fixed;top: 0;left: 0; opacity:0.2; ">
+
 <div style=" margin: 5% 5% 5% 5%; position:absolute; max-width:100%">
   <form id="patient_form" action="form_php.php" method="post" >
 
@@ -209,5 +223,9 @@ echo "<form method='POST' action='".setComment($conn)."'>
 getComments($conn);
 
 ?>
+<form action="logout.php" >
+	<button type='submit' name='commentSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>LOG OUT</button>
+</form>
+
 </body>
 </html>

@@ -1,19 +1,26 @@
 <?php
 
+
+session_start();
+	
 include 'dbConfig.php';
 
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
 
 
-$sql = "SELECT * FROM userinfo WHERE uid='$uid' AND pwd='$pwd';
-$result = conn->query($sql);
+$sql = "SELECT * FROM userinfo WHERE uid='$uid' AND pwd='$pwd'";
+$result=mysqli_query($conn,$sql);
 
 if(!$row=$result->fetch_assoc()) {
-	echo " Your username password is incorrect";
+	echo '<script language="javascript">';
+	echo 'alert("You have entered wrong User ID or Password")';
+	echo '</script>';
+	
 } else{
-	echo " You are logged in!!";
+	$_SESSION['id'] = $row['id'];
+	header("Location: Fundraiser.php");
+	
 }
 
 
-//header("Location: login.php");
