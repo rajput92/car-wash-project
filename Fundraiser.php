@@ -1,22 +1,16 @@
 <?php
-
-	if(isset($_SESSION['id'])){
-		session_start();
+session_start();
 		date_default_timezone_set('PST8PDT');
 	include 'dbConfig.php';
 	include 'comments.php';
-			
-	}
-	else{
+	if(!isset($_SESSION['uid'])){
 		
-		session_destroy();
-		echo "Please login/signup to access this page";
+		header("Location: login.php");
 		
-	
-	
 	}
-?>
+	
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -175,9 +169,9 @@
 	<fieldset>
     <legend>Family Doctor Info.</legend>
 	Family Doctor: <input type="text" id="fDoctor" name = "fDoctor"  placeholder="family doctor name">
-	Phone#: <input type="text" id="phone" name = "phone" placeholder="family doctor phone" >
-	Fax#: <input type="text" id="phone" name = "phone"  placeholder="family doctor fax">
-	Address:<textarea name="address" form="patient_form">Enter address here...</textarea>
+	Phone#: <input type="text" id="phone" name = "familydoctorphone" placeholder="family doctor phone" >
+	Fax#: <input type="text" id="phone" name="doctorfaxphone"  placeholder="family doctor fax">
+	Address:<textarea name="familydoctoraddress" form="patient_form">Enter address here...</textarea>
 	</fieldset><br>
 	
 	<fieldset>
@@ -201,7 +195,7 @@
 	<fieldset>
     <legend></legend>
 	How many adults live in the household?<input type="text" id="adultsinfo" name="adultsinfo" ></textarea>
-	How many children under age of 18?<input type="text" id="childrenInfo" ></textarea>
+	How many children under age of 18?<input type="text" name="childrenInfo" ></textarea>
 	Are their pets in household?<input type="text" id="petsinfo" name="petsinfo" ></textarea>
 	If so how many?<input type="text" id="petsNo" name="petsNo" ></textarea>
 	What kind?<input type="text" id="petsKind"name="petsKind" ></textarea>
@@ -214,7 +208,6 @@
   </div>
 <?php
 echo "<form method='POST' action='".setComment($conn)."'>
-<input type='hidden' name='uid' value='Anonymus'>
 <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
 <textarea name='message'></textarea><br>
 <button type='submit' name='commentSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>Comments</button>
