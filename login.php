@@ -14,16 +14,18 @@
 <form action="afterlogin.php" method="POST">
 	<input type="text" name="uid" placeholder="Username"><br>
 	<input type="password" name="pwd" placeholder="Password"><br>
-	<button type='submit' name='commentSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>Login</button>
+	<button type='submit' name='loginSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>Login</button>
 </form>
 
 <?php 
 
-	if(isset($_SESSION['id'])){
-		echo $_SESSION['id'];
+	if(isset($_SESSION['uid'])){
+		echo $_SESSION['uid'];
 	}
 	else{
-		echo "you are not logged in";
+		echo '<script language="javascript">';
+	echo 'alert("You have not logged in!!")';
+	echo '</script>';
 	}
 
 ?>
@@ -35,7 +37,7 @@
 	<input type="text" name="last" placeholder="Lastname"><br>
 	<input type="text" name="uid" placeholder="Username"><br>
 	<input type="password" name="pwd" placeholder="Password"><br>
-	<button type='submit' name='commentSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>SIGN UP</button>
+	<button type='submit' name='signup' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>SIGN UP</button>
 	
 </form>
 
