@@ -12,19 +12,21 @@
 <?php
 
 function setComment($conn){
+
 	if(isset($_POST['commentSubmit'])){
-		$uid=$_POST['uid'];
+		$uid=$_SESSION['uid'];
 		$date=$_POST['date'];
 		$message=$_POST['message'];
-		$sql = "INSERT INTO comments (uid, date,message) 
+		
+		$sql = "INSERT INTO commentsinfo (uid, date,message) 
 		VALUES ('$uid', '$date', '$message')";
 		$result=mysqli_query($conn,$sql);
 	}
 }
 	
 function getComments($conn){
-	$sql = "SELECT * from comments";
-	$result=mysqli_query($conn,$sql);
+	$sql_comment = "SELECT * from commentsinfo";
+	$result=mysqli_query($conn,$sql_comment);
 	while($row=mysqli_fetch_assoc($result)){
 	echo "<div class='comment_box'>";
 	echo $row['uid']."<br>";
