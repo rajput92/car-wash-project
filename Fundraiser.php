@@ -3,11 +3,20 @@ session_start();
 		date_default_timezone_set('PST8PDT');
 	include 'dbConfig.php';
 	include 'comments.php';
+	$uid = $_SESSION['uid'];
+	$sql = "SELECT * from patientinfo where uid='$uid'";
+	$result=mysqli_query($conn,$sql);
 	if(!isset($_SESSION['uid'])){
 		
 		header("Location: login.php");
 		
 	}
+	
+if ($result && mysqli_num_rows($result) == 1){
+	
+	header("Location: retriveForm.php");
+}
+
 	
 
 ?>

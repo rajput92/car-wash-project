@@ -10,11 +10,10 @@
 <link rel="stylesheet" type="text/css" href="Fundraiser.css"/>
 </head>
 <body>
-
-<form action="afterlogin.php" method="POST">
-	<input type="text" name="uid" placeholder="Username"><br>
-	<input type="password" name="pwd" placeholder="Password"><br>
-	<button type='submit' name='loginSubmit' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>Login</button>
+<form action="afterlogin.php" method="POST" style="width:50%; display:block; margin: auto">
+	<input type="text" name="uid" placeholder="Username" required><br>
+	<input type="password" name="pwd" placeholder="Password" required><br>
+	<button type='submit' name='loginSubmit'  style=' border:none;color:white;padding:15px 32px;display:inlin-block;background-color:#4d668e'>Login</button>
 </form>
 
 <?php 
@@ -32,11 +31,11 @@
 
 <br><br>
 
-<form action="signup.php" method="POST">
-	<input type="text" name="first" placeholder="Firstname"><br>
-	<input type="text" name="last" placeholder="Lastname"><br>
-	<input type="text" name="uid" placeholder="Username"><br>
-	<input type="password" name="pwd" placeholder="Password"><br>
+<form action="signup.php" method="POST" style="width:50%; display:block; margin: auto">
+	<input type="text" name="first" placeholder="Firstname" required><br>
+	<input type="text" name="last" placeholder="Lastname" required><br>
+	<input type="text" name="uid" placeholder="Username" required><br>
+	<input type="password" name="pwd" placeholder="Password" required><br>
 	<button type='submit' name='signup' style='border:none;color:white;padding:15px 32px; text-algin:center;display:inlin-block;background-color:#4d668e'>SIGN UP</button>
 	
 </form>

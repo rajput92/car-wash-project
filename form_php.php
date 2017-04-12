@@ -1,5 +1,8 @@
 <?php
 include 'dbConfig.php';
+session_start();
+
+$uid=$_SESSION['uid'];
 
 $name = $_POST['name'];
 $dob = $_POST['dob'];
@@ -54,7 +57,7 @@ $petsNo = $_POST['petsNo'];
 $petsKind = $_POST['petsKind'];
 
 
-$sql ="INSERT INTO `patientInfo` (`namePatient`, `dob`, `gender`, `address`, `phonePatient`, `countryPatient`, `ssnPatient`, `visaStatusPatient`, `caseManagerName`, `caseManagerPhone`, `maritialStatusPatient`, `insurancePatient`, `income($)`, `asset`, `mentalStatus`, `pastMedicalHistory`, `hospitalization`, `cardiovascular`, `neuro_hearing`, `ambulatio_cane`, `ambulatio_walker`, `ambulatio_wheelChair`, `incontinent`, `continent`, `bathing`, `dressing`, `feeding`, `lighhouse`, `mealpreparation`, `historyoffall`, `history_fall`, `date_fall`, `familyDoctorName`, `familyDoctorphone`, `familyDoctorFax`, `familyDoctoraddress`, `contactPersonName`, `contactPersonrelation`, `contactPersonphone`, `contactPersonHomephone`, `contactPersonWorkphone`, `backupPersonName`, `backupPersonRelatioin`, `backupPersonPhone`, `adultsNo`, `childerNo`, `petsInfo`, `petsNo`, `petsKind`, `uid`) VALUES ('$name', '$dob', '$gender', '$address', '$phone', '$country', '$ssn', '$visa', '$cManager', '$cphone', '$maritial', '$insurance', '$income', '$asset', '$mStatus', '$hospitalizatioin', '$pHistory', '$cardivascular', '$hearingaid', '$cane', '$walker','$wheelchair', '$incontinent', '$continent', '$bathing', '$dressing', '$feeding', '$lighhouse', '$mealpreparation', '$hfall', '$fall', '$date', '$fDoctor', '$familydoctorphone', '$doctorfaxphone', '$familydoctoraddress', '$cPerson', '$relationship', '$cellphone', '$homephone', '$workphone', '$bPerson', '$brelationship', '$bcellphone', '$adultsinfo', '$childrenInfo', '$petsinfo', '$petsNo', '$petsKind','rajput1914')";
+$sql ="INSERT INTO `patientInfo` (`namePatient`, `dob`, `gender`, `address`, `phonePatient`, `countryPatient`, `ssnPatient`, `visaStatusPatient`, `caseManagerName`, `caseManagerPhone`, `maritialStatusPatient`, `insurancePatient`, `income($)`, `asset`, `mentalStatus`, `pastMedicalHistory`, `hospitalization`, `cardiovascular`, `neuro_hearing`, `ambulatio_cane`, `ambulatio_walker`, `ambulatio_wheelChair`, `incontinent`, `continent`, `bathing`, `dressing`, `feeding`, `lighhouse`, `mealpreparation`, `historyoffall`, `history_fall`, `date_fall`, `familyDoctorName`, `familyDoctorphone`, `familyDoctorFax`, `familyDoctoraddress`, `contactPersonName`, `contactPersonrelation`, `contactPersonphone`, `contactPersonHomephone`, `contactPersonWorkphone`, `backupPersonName`, `backupPersonRelatioin`, `backupPersonPhone`, `adultsNo`, `childerNo`, `petsInfo`, `petsNo`, `petsKind`, `uid`) VALUES ('$name', '$dob', '$gender', '$address', '$phone', '$country', '$ssn', '$visa', '$cManager', '$cphone', '$maritial', '$insurance', '$income', '$asset', '$mStatus', '$hospitalizatioin', '$pHistory', '$cardivascular', '$hearingaid', '$cane', '$walker','$wheelchair', '$incontinent', '$continent', '$bathing', '$dressing', '$feeding', '$lighhouse', '$mealpreparation', '$hfall', '$fall', '$date', '$fDoctor', '$familydoctorphone', '$doctorfaxphone', '$familydoctoraddress', '$cPerson', '$relationship', '$cellphone', '$homephone', '$workphone', '$bPerson', '$brelationship', '$bcellphone', '$adultsinfo', '$childrenInfo', '$petsinfo', '$petsNo', '$petsKind','$uid')";
 
 
 if ($conn->query($sql) === TRUE) {
