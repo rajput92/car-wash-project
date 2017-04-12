@@ -18,7 +18,7 @@ if(!$row=$result->fetch_assoc()) {
 	echo '</script>';
 	
 } else{
-	$_SESSION['id'] = $row['id'];
+	$_SESSION['uid'] = $row['uid'];
 	header("Location: Fundraiser.php");
 	
 }
