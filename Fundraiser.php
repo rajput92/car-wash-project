@@ -11,8 +11,7 @@ session_start();
 		header("Location: login.php");
 		
 	}
-	
-if ($result && mysqli_num_rows($result) == 1){
+	else if ($result && mysqli_num_rows($result) == 1){
 	
 	header("Location: retriveForm.php");
 }
